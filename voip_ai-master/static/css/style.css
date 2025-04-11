@@ -1,0 +1,109 @@
+/* استایل کلی برای body */
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+}
+
+/* استایل برای container */
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* استایل برای پاپ‌آپ */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+/* استایل برای overlay پاپ‌آپ */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* استایل دکمه‌های پاپ‌آپ */
+.popup button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #0056b3;
+}
+
+/* استایل برای دکمه بستن */
+.close-btn {
+    background-color: red;
+}
+
+
+/* استایل برای نمایش پیام موفقیت یا خطا */
+.message {
+    margin-top: 10px;
+    color: green;
+}
+
+.error {
+    color: red;
+}
+
+
+/* استایل برای هر سلول جدول */
+th {
+    background-color: #00b2ff !important;
+    color: white !important; /* رنگ نوشته سفید */
+    padding: 12px !important;
+    border: 1px solid #ddd !important;
+    text-align: center !important; /* متن را به صورت افقی در وسط قرار می‌دهد */
+    vertical-align: middle !important; /* متن را به صورت عمودی در وسط قرار می‌دهد */
+    word-wrap: break-word !important;
+    box-sizing: border-box !important; /* برای اطمینان از محاسبه دقیق عرض */
+}
+
+
+/* استایل برای دکمه حذف */
+button.table-btn {
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+button.delete-btn:hover {
+    background-color: darkred;
+}
+
+/* استایل برای ستون عملیات (دکمه حذف) */
+th:last-child, td:last-child {
+    width: 120px; /* عرض ستون دکمه حذف */
+}
+
+/* استایل برای فرم حذف */
+form {
+    display: inline;
+}
