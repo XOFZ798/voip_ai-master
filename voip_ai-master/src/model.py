@@ -1,10 +1,9 @@
 import re
-from datetime import datetime
 from peewee import Model, CharField
 from playhouse.db_url import connect
 from config import DB_USER, DB_PASS, DB_PORT, DB_DATABASE
 
-database = connect(f'mysql://{DB_USER}:{DB_PASS}@127.0.0.1:{DB_PORT}/{DB_DATABASE}')
+database = connect(f"mysql://{DB_USER}:{DB_PASS}@127.0.0.1:{DB_PORT}/{DB_DATABASE}")
 
 
 class BaseModel(Model):
@@ -21,10 +20,6 @@ class User(BaseModel):
     city = CharField(max_length=255, null=True)
     coldrooms_code = CharField(max_length=255)
     coldrooms_phone = CharField(max_length=255)
-
-
-with database:
-    database.create_tables([User])
 
 
 def validate_phone(value):
@@ -44,6 +39,7 @@ def validate_phone(value):
 class LoginUser(BaseModel):
     email = CharField(unique=True)
     password = CharField()  # در حالت حرفه‌ای، باید هش‌شده باشد
+
 
 with database:
     database.create_tables([User, LoginUser])
